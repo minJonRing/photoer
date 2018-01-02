@@ -1,0 +1,14 @@
+{
+    "pages": [
+        "pages/list/list",
+        "pages/index/index",
+        "pages/photographer/photographer",
+        "pages/appointment/appointment"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    }
+}

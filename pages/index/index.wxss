@@ -1,0 +1,315 @@
+/**index.wxss**/
+
+.body {
+    line-height: 1.5;
+    font-size: 16px;
+    color: #333;
+    outline: 0;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-style: normal;
+}
+
+scroll-view {
+    height: 1324rpx;
+}
+
+text {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+}
+
+image,
+.a,
+.span,
+.dl,
+.dt,
+.dd,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.p {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-style: normal;
+}
+
+image {
+    border: 0;
+}
+
+.p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6rem;
+}
+
+.a {
+    color: #0062cc;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.a:hover {
+    outline: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-size: 100%;
+    font-weight: 400
+}
+
+.h1 {
+    font-size: 2rem;
+}
+
+.h2 {
+    font-size: 1.2rem;
+}
+
+.h3 {
+    font-size: 1.2rem;
+}
+
+.h4 {
+    font-size: 1rem;
+}
+
+.h5 {
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.h6 {
+    font-size: 0.6rem;
+    font-weight: normal;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.header_wrap {
+    background: #1b1b1b;
+    text-align: center;
+    color: #b8aa90;
+    padding: 24rpx 0;
+}
+
+.header_wrap .dl .dt {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    overflow: hidden;
+    margin: auto;
+    border: 0.2rem solid #fff;
+    margin-bottom: 0.6rem;
+}
+
+.header_wrap .dl .dt image {
+    width: 100%;
+}
+
+.header_wrap .dl .star image {
+    width: 1.4rem;
+    margin-left: 5px;
+}
+
+.header_wrap .dl .dd .sp01 {
+    color: #fff;
+}
+
+.header_wrap .dl .dd .sp02 {
+    font-size: 0.8rem;
+}
+
+.header_wrap .dl .kind {
+    font-size: 0.7rem;
+}
+
+.header_wrap .dl .dd {
+    line-height: 2rem;
+}
+
+.header_wrap .dl .dd .sup image {
+    width: 0.8rem;
+}
+
+.linkDate button {
+    background: #eb4f38;
+    color: #fff;
+    border: none;
+    border-radius: 3rem;
+    width: 160px;
+    font-size: 0.9rem;
+    font-family: "微软雅黑";
+    line-height: 2;
+}
+
+.wrap .adress {
+    padding: 1rem 1.4rem;
+    font-size: 14px;
+}
+
+.wrap .adress image {
+    width: 0.8rem;
+}
+
+.wrap .promise {
+    padding: 0 1.4rem;
+}
+
+.wrap .evaluation_tit {
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    color: #b8aa90;
+    text-align: center;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+.wrap .evaluation_star {
+    background: #f4f4f4;
+    padding: 30rpx 0;
+}
+
+.wrap .total {
+    text-align: center;
+}
+
+.wrap .total .dt {
+    font-size: 1.6rem;
+}
+
+.wrap .total .dd image {
+    width: 1.4rem;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+}
+
+.wrap .evaluation_star .alone .p image {
+    width: 1rem;
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+}
+
+.wrap .evaluation_star .alone .p {
+    color: #999;
+}
+
+.wrap .evaluation_star .alone .p text {
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+.fn-left {
+    display: inline-block;
+}
+
+.fn-right {
+    display: inline-block;
+}
+
+.word_wrap {
+    margin-left: 4rem;
+    margin-top: -3rem;
+}
+
+.evaluation_con {
+    padding-bottom: 2.6rem;
+}
+
+.evaluation_list {
+    border-bottom: 1px solid #dedede;
+    padding: 1.4rem;
+}
+
+.evaluation_list .print {
+    width: 112rpx;
+    height: 112rpx;
+    overflow: hidden;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+
+/* .evaluation_list .print image {
+    width: 100%;
+    width: 48px;
+    height: 48px;
+} */
+
+.evaluation_list .call {
+    width: 100%;
+    border: 2px;
+}
+
+.evaluation_list .pstar {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6rem;
+}
+
+.evaluation_list .pstar image {
+    width: 1rem;
+    width: 14px;
+    height: 14px;
+    margin-left: 2px;
+}
+
+.evaluation_list .time {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.evaluation_list .word text {
+    font-size: 0.7rem;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer button {
+    background: #b8aa90;
+    color: #fff;
+    border: none;
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+
+/* star-img */
+
+.star-img {
+    width: 32rpx !important;
+    height: 32rpx !important;
+}

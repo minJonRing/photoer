@@ -1,0 +1,23 @@
+.filter-btn {
+    background: #b8aa90;
+    color: #fff;
+    line-height: 100rpx;
+    text-align: center;
+}
+
+.filter-hot,
+.filter-time {
+    line-height: 90rpx;
+    border-bottom: 2rpx transparent solid;
+    border-color: #999;
+    border-top: 8rpx transparent solid;
+}
+
+.filter-hot {
+    border-right: 2rpx #999 solid;
+}
+
+.show {
+    border-top-color: dodgerblue;
+    color: dodgerblue;
+}

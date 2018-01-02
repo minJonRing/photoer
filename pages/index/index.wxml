@@ -1,0 +1,121 @@
+<!--index.wxml-->
+<view class="body">
+	<view class="header_wrap">
+		<view class="dl text-center">
+			<image class="dt" src="http://cq.807mjay.com/{{photographer.photographer.pher_avator}}"></image>
+			<view class="dd">
+				<text class="sp01">摄影师</text> {{photographer.photographer.nickname}} 
+				<text class="sp02">[{{photographer.level.name_ch}}]</text>
+			</view>
+			<view class="dd">
+				<view class="kind">
+					<text>一对一 / {{photographer.storeName}} / {{photographer.photographer.attempt_num}}人气 </text>
+					<image src="images/fire.png" style="width:15px;height:15px;"></image>
+				</view>
+			</view>
+			<view class="dd">
+				<view class="star">
+					<image class="star-img" src="images/star{{photographer.score >= index?'':'01'}}.png" wx:for="{{5}}" wx:for-item="i" wx:key="{{index}}" ></image>
+				</view>
+			</view>
+			<view class="linkDate inline-block text-center"  bindtap="bindDateTap">
+				<button>Ta的档期</button>
+			</view>
+		</view>
+	</view>
+	<view class="wrap">
+		<view class="adress flex flex-top"> 
+			<image src="images/adress.png" style="width:16px;height:22.8px;"></image>
+			<text class="p-left-6">{{photographer.photographer.address}}</text>
+		</view>
+		<view class="promise" style="flex-direction:column;">
+			<view>
+				<text style="font-size:1rem;">服务承诺：</text>
+			</view>
+			<view>
+				<text style="font-size:0.7rem;">{{photographer.photographer.promise}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="wrap">
+		<view class="evaluation_tit">
+			<text>新人评价</text>
+		</view>
+		<view class="evaluation_star flex flex-mid flex-center-2">
+			<view class="fn-left total">
+				<view>
+					<text class="dt">{{score}}</text>
+				</view>
+				<view class="dd">
+					<image class="star-img" src="images/star{{photographer.score >= index?'':'01'}}.png" wx:for="{{5}}"wx:key="{{index}}" ></image>
+				</view>
+				<text class="dd">{{photographer.photographer.attempt_num}}人评价</text>
+			</view>
+			<view class="fn-right alone">
+				<view class="p">
+					<image class="star-img" src="images/star.png"> </image>
+					<image class="star-img" src="images/star.png"> </image>
+					<image class="star-img" src="images/star.png"> </image>
+					<image class="star-img" src="images/star.png"> </image>
+					<image class="star-img" src="images/star.png"> </image>
+					<text>{{photographer.status_5/photographer.commentCount*100?photographer.status_5/photographer.commentCount*100:0}}%</text>
+				</view>
+				<view class="p">
+					<image class="star-img" src="images/star.png"> </image>
+					<image class="star-img" src="images/star.png"> </image>
+					<image class="star-img" src="images/star.png"> </image>
+					<image class="star-img" src="images/star.png"> </image>
+					<image class="star-img" src="images/star01.png"> </image>
+					<text>{{photographer.status_4/photographer.commentCount*100?photographer.status_4/photographer.commentCount*100:0}}%</text>
+				</view>
+				<view class="p">
+					<image class="star-img" src="images/star.png"> </image>
+					<image class="star-img" src="images/star.png"> </image>
+					<image class="star-img" src="images/star.png"> </image>
+					<image class="star-img" src="images/star01.png"> </image>
+					<image class="star-img" src="images/star01.png"> </image>
+					<text>{{photographer.status_3/photographer.commentCount*100?photographer.status_3/photographer.commentCount*100:0}}%</text>
+				</view>
+				<view class="p">
+					<image class="star-img" src="images/star.png"> </image>
+					<image class="star-img" src="images/star.png"> </image>
+					<image class="star-img" src="images/star01.png"> </image>
+					<image class="star-img" src="images/star01.png"> </image>
+					<image class="star-img" src="images/star01.png"> </image>
+					<text>{{photographer.status_2/photographer.commentCount*100?photographer.status_2/photographer.commentCount*100:0}}%</text>
+				</view>
+				<view class="p">
+					<image class="star-img" src="images/star.png"> </image>
+					<image class="star-img" src="images/star01.png"> </image>
+					<image class="star-img" src="images/star01.png"> </image>
+					<image class="star-img" src="images/star01.png"> </image>
+					<image class="star-img" src="images/star01.png"> </image>
+					<text>{{photographer.status_1/photographer.commentCount*100?photographer.status_1/photographer.commentCount*100:0}}%</text>
+				</view>
+			</view>
+		</view>
+		<view class="evaluation_con">
+			<view class="evaluation_list flex flex-top flex-center-3" wx:for="{{comment}}" wx:key="{{item.prev_id}}">
+				<view class="print flex-0 m-right-12">
+					<image class="block wh100" src="{{item.user_avatar}}"></image>
+				</view>
+				<view class="flex-1">
+					<view class="call clearfix line10">
+						<text class="fn-left p-right-6">{{item.user_nickname}}</text> 
+						<text class="fn-right time span">{{item.create_time}}</text>
+					</view>
+					<view class="pstar">
+						<image src="images/star{{item.score >= index?'':'01'}}.png" wx:for="{{5}}" wx:for-item="i" wx:key="{{index}}"></image>
+					</view>
+					<view class="word">
+						<text>{{item.comment_content}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 帮我约他/她 -->
+    <view class="footer" bindtap="bindViewTap">
+        <button>帮我约Ta</button>
+    </view>
+</view>

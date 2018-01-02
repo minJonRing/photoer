@@ -1,0 +1,128 @@
+/* 档期 date */
+
+.date-year button {
+    border-radius: 0;
+    border: none;
+}
+
+.date-year button::after {
+    border: none;
+}
+
+.date-year button image {
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.user-date {
+    width: 107.142857rpx;
+    height: 107.142857rpx;
+    line-height: 87.142857rpx;
+    padding: 10rpx;
+}
+
+.num {
+    border-radius: 50%;
+    border: 4rpx rgba(0, 128, 0, .3) solid;
+    box-shadow: inset 0 0 10rpx rgba(0, 128, 0, .3);
+    background-color:#fff;
+    padding:0;
+    margin:0;
+    font-size:28rpx;
+    /* line-height:87.142857rpx; */
+    line-height:72rpx;    
+}
+
+.num::after {
+    position: absolute;
+    font-size: 16rpx;
+    width: 100%;
+    height:auto;
+    top: 52rpx;
+    left: 0;
+    border:none;
+    transform:scale(1);
+    line-height:1;    
+    background-color:transparency;
+}
+
+
+/* common */
+
+.w25 {
+    width: 25%;
+}
+
+.yes .num {
+    border-color: rgba(0, 191, 255, 1);
+    box-shadow: inset 0 0 10rpx rgba(0, 191, 255, .3);
+    
+}
+
+.yes .num::after {
+    content: "可预约"
+}
+
+.no .num {
+    border-color: rgba(0, 0, 0, 1);
+    box-shadow: inset 0 0 10rpx rgba(0, 0, 0, .3);
+    opacity: 0.5;
+}
+
+.no .num::after {
+    content: ""
+}
+
+.schedule .num {
+    border-color: rgba(255, 0, 0, 1);
+    box-shadow: inset 0 0 10rpx rgba(255, 0, 0, .3);
+}
+
+.schedule .num::after {
+    content: "已预约"
+}
+
+.attempt .num {
+    border-color: rgba(0, 0, 0, 1);
+    box-shadow: inset 0 0 10rpx rgba(0, 0, 0, .3);
+}
+
+.attempt .num::after {
+    content: "无档期"
+}
+
+.user-date .active {
+    border-color: rgba(0, 0, 0, 1);
+    background-color:#000;
+    color:#fff;
+}
+/* 提示 */
+.hint view {
+    margin: 12rpx;
+}
+
+.hint text {
+    padding-left: 12rpx;
+}
+
+
+/* return  */
+.return {
+    position:fixed;
+    bottom:0;
+    left:0;
+}
+.return button {
+    background:#b8aa90;
+    color:#fff;
+    border:none;
+    width:100%;
+    height:2.5rem;
+    text-align:center;
+    font-size:1rem;
+    cursor:pointer;
+    border-radius:0;    
+}
+.return button:after {
+    border-radius:0;
+}

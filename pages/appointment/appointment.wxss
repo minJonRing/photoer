@@ -1,0 +1,195 @@
+form {
+    line-height: 1.5;
+    font-size: 16px;
+    color: #333;
+    outline: 0;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-style: normal;
+}
+
+.list {
+    border-bottom: 1px solid #eee;
+    padding: 0 0.75rem;
+}
+
+.list .write {
+    line-height: 2.6rem;
+}
+
+.list .write .span,
+.list .write .select {
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+.list .write input {
+    float: right
+}
+
+.list .write picker {
+    float: right;
+    width: 66%;
+}
+
+.list .write radio-group {
+    float: right;
+}
+
+.list .write .span .i {
+    color: #f15532;
+}
+
+.list .write .span.sp01 {
+    width: 100%;
+}
+
+.list .write input,
+.list .write select {
+    height: 2.6rem;
+    line-height: 2.6rem;
+    border: none;
+}
+
+.list .info {
+    font-size: 0.8rem;
+    line-height: 2rem;
+}
+
+.list .info image {
+    width: 1rem;
+    width: 16px;
+    height: 16px;
+}
+
+.grey {
+    color: #999;
+}
+
+.red {
+    color: #f15532;
+}
+
+.list .number input {
+    font-size: 0.8rem;
+    width: 130px;
+    height: 2.6rem;
+    line-height: 2rem;
+    float: left;
+}
+
+.list .number button {
+    font-size: 0.7rem;
+    width: 100px;
+    height: 2rem;
+    line-height: 1.4rem;
+    float: right;
+}
+
+.list button {
+    background: #009bdd;
+    color: #fff;
+    border-radius: 0.2rem;
+    border: none;
+    font-size: 26rpx;
+    padding: 0 12rpx;
+}
+
+.list .write label {
+    float: left;
+    margin-right: 0.8rem;
+    font-size: 1rem;
+}
+
+.list .write .sradio {
+    width: 1.4rem !important;
+    height: 1.4rem !important;
+    margin-top: 0.6rem;
+}
+
+.dateword {
+    position: relative;
+    width: 44%;
+    float: left;
+    display: inline-block;
+}
+
+.dateword input {
+    text-indent: 0.2rem;
+    width: 100%;
+}
+
+.dateword input.datime {
+    display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+    border: 1px solid #dedede;
+    background: #fff;
+}
+
+.dateword i {
+    position: absolute;
+    right: 0.2rem;
+    top: 0.3rem;
+}
+
+.dateword .tline {
+    float: left;
+    font-size: 1rem;
+    line-height: 2.6rem;
+    padding: 0 0.4rem;
+}
+
+textarea {
+    height: 200rpx;
+    position: static;
+}
+
+.comfim {
+    background: #2f2f2f;
+    color: #b8aa90;
+    border-radius: 6rpx;
+    border: none;
+    width: 90%;
+    margin: auto;
+    display: block;
+    line-height: 2.2;
+    padding: 12rpx 0;
+}
+
+
+/* 信息确认 */
+
+.shade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 48rpx;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 999999;
+}
+
+.shade-mid {
+    padding: 12rpx;
+    width: 560rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+}
+
+.shade-box,
+.shade-title {
+    margin: 12rpx;
+}
+
+.shade-box text:first-child {
+    padding-right: 12rpx;
+}
+
+.shade button {
+    width: 36%;
+}
+
+.shade button:first-child {
+    background-color: #62b900;
+}

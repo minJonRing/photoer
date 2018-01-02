@@ -1,0 +1,44 @@
+<view bindtouchstart="touchStart" bindtouchend="touchEnd">
+    <view class="user-mid" >
+        <view class="user-tags relative">
+            <view class="user-tag tag4 w100 bg-white">
+                <view class="date-year flex flex-mid text-center border-top border-color-blue">
+                    <button class="flex-1" plain="true" bindtap="prevMonth">
+                        <image src="/public/image/back.svg" />
+                    </button>
+                    <text class="flex-3 text-center p-top-12 p-bottom-12">{{year}}年{{month<9?0:''}}{{month+1}}月</text>
+                    <button class="flex-1" plain="true" bindtap="nextMonth">
+                        <image src="/public/image/right.svg" />
+                    </button>
+                </view>
+                <view class="date-week flex text-center f16 p-top-12 p-bottom-12 border-top border-color-green">
+                    <text class="flex-1">日</text>
+                    <text class="flex-1">一</text>
+                    <text class="flex-1">二</text>
+                    <text class="flex-1">三</text>
+                    <text class="flex-1">四</text>
+                    <text class="flex-1">五</text>
+                    <text class="flex-1">六</text>
+                </view>
+                <view class="date-day flex flex-wrap f16 border-top border-bottom border-color-orange p-top-6 p-bottom-6" >
+                    <view class="user-date text-center {{item.class}} {{item.operation}}" wx:for="{{date}}" wx:key="{{item.day}}" >
+                        <button class="inline-block num wh100" style="opacity:{{item.opacity}}" data-year="{{item.year}}" data-month="{{item.month}}" data-day="{{item.day}}" data-operation="{{item.operation}}" data-status="{{item.class}}" hover-class="{{item.class==''&&item.operation=='yes'?'active':''}}" bindtap="reserve">{{item.day}}</button>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="hint color-999">
+        <view class="flex flex-mid f12">
+            <icon type="info" size="16" color="red" />
+            <text>半透明、红色、黑色表示不可预约!</text>
+        </view>
+        <view class="flex flex-mid f12">
+            <icon type="info" size="16" color="deepskyblue" />
+            <text>蓝色表示可预约!!</text>
+        </view>
+    </view>
+    <view class="return w100">
+        <button bindtap="bindReturn">返回上一页</button>
+    </view>
+</view>

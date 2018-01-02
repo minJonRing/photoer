@@ -1,0 +1,160 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="list">
+        <view class="write clearfix flex">
+            <text class="flex-0 span p-right-12">意向大师：</text>
+            <text class="f16">{{name}}</text>
+            <input name="attempt[photoer_id]" value="{{photoer_id}}" style="display:none" />
+        </view>
+        <view class="info grey flex flex-mid">
+            <image class="m-right-12" src="images/light.png" alt=""></image> 
+            <text>您有意向的大师</text>
+        </view>
+    </view>
+    
+    <view class="list f16">
+        <view class="write clearfix">
+            <text class="span w100">意向拍摄日期：</text>
+        </view>
+        <view class="write clearfix">
+            <text class="span f16">开始时间 *：</text>
+            <picker mode="date" value="{{startDate}}" name="attempt[start_date]" bindchange="bindStartDateChange">
+                <view class="picker">
+                    {{startDate}}
+                </view>
+            </picker>
+        </view>
+        <view class="write clearfix">
+            <text class="span f16">结束时间 *：</text>
+            <picker mode="date" value="{{endDate}}" name="attempt[end_date]" bindchange="bindEndDateChange">
+                <view class="picker">
+                    {{endDate}}
+                </view>
+            </picker>
+        </view>
+        <view class="info grey flex flex-mid">
+          <image class="m-right-12" src="images/light.png" alt=""></image>
+          <text>您想要什么时候拍</text>
+        </view>
+    </view>
+
+    <view class="list">
+        <view class="write f16">
+            <text class="span f16">意向门店 *：</text>
+            <picker bindchange="bindPickerChange" name="attempt[store_id]" value="{{storeId[index]}}" range="{{storeName}}">
+                <view class="picker">
+                  当前选择：{{storeName[index]}}
+                </view>
+            </picker>
+        </view>
+        <view class="info grey flex flex-mid">
+            <image class="m-right-12" src="images/light.png" alt=""></image> 
+            <text>您想去哪个门店</text>
+        </view>
+    </view>
+
+    <view class="list">
+        <view class="write clearfix flex flex-mid">
+            <text class="flex-0 f16 p-right-12">姓名 *:</text>
+            <input class="flex-1 f16" name="attempt[realname]" value="{{username}}" bindchange="bindSetUsername" placeholder="请输入您姓名" />
+            <input class="flex-1 f16" name="attempt[user_id]" value="{{user_id}}" style="display:none"/>
+        </view>
+    </view>
+    <view class="list">
+        <view class="write f16">
+            <text class="f16">性别 *：</text>
+            <radio-group class="radio-group" name="attempt[sexual]" bindchange="bindRadioChange">
+                <label class="radio" wx:for="{{items}}" wx:key="{{item.name}}">
+                    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+                </label>
+            </radio-group>
+        </view>
+    </view>
+
+    <view class="list">
+        <view class="write clearfix flex flex-mid">
+            <text class="flex-0 f16">手机号码 *：</text>
+            <input class="flex-1 f16" type="number" maxlength="11" name="attempt[telphone]" value="{{phone}}" bindchange="bindPhoneChange" placeholder="请输入您的手机号码" />
+            <button class="flex-0" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取绑定手机</button>
+        </view>
+    </view>
+
+    <view class="list">
+        <view class="write clearfix flex flex-mid">
+            <text class="flex-0 f16">订单号(非必须)：</text>
+            <input class="flex-1 f16" type="number" maxlength="99" name="attempt[order_no]" bindchange="bindOrderChange" placeholder="请输入您的订单号" />
+        </view>
+    </view>
+
+    <view class="list">
+        <view class="write clearfix flex flex-mid">
+            <text class="flex-0 f16">您的QQ：</text>
+            <input class="flex-1 f16" type="number" maxlength="11" name="attempt[qq]" bindchange="bindQqChange" placeholder="请输入您的QQ号码" />
+        </view>
+    </view>
+
+    <view class="list" wx:if="{{!shade}}">
+        <view class="write clearfix flex flex-mid p-top-6">
+            <text class="flex-0 f16">备注信息：</text>
+            <textarea class="flex-1 f16  line12" maxlength="1000" name="attempt[remark]" bindblur="bindRemarkChange" placeholder="请输入您的备注信息" />
+        </view>
+    </view>
+    <view class="p-top-6 p-bottom-6">
+        <button class="comfim f16" bindtap="bindShowShade">确认预约</button>
+    </view>
+
+    <view class="shade wh100 flex flex-center-1 flex-mid" wx:if="{{shade}}">
+        <view class="shade-mid">
+            <view class="border-bottom border-color-999">
+                <view class="shade-box text-center">
+                    <text class="f18">预约信息确认</text>
+                </view>
+            </view>
+            <view class="border-bottom border-color-999 f16">
+                <text class="shade-title block f18 color-blue">用户信息:</text>
+                <view class="shade-box">
+                    <text>姓名:</text>
+                    <text>{{username}}</text>
+                </view>
+                <view class="shade-box">
+                    <text>性别:</text>
+                    <text>{{sex == 'gril'?'女':'男'}}</text>
+                </view>
+                <view class="shade-box">
+                    <text>手机号:</text>
+                    <text>{{phone || '未填写'}}</text>
+                </view>
+            </view>
+            <view class="border-bottom border-color-999 f16">
+                <text class="shade-title block f18 color-green">预约信息:</text>
+                <view class="shade-box">
+                    <text>摄影师姓名:</text>
+                    <text>{{name}}</text>
+                </view>
+                <view class="shade-box">
+                    <text>门店信息:</text>
+                    <text>{{storeName[index]}}</text>
+                </view>
+                <view class="shade-box">
+                    <text class="block">预约时间:</text>
+                    <text>{{startDate}} 至 {{endDate}}</text>
+                </view>
+                <view class="shade-box" wx-if="{{order}}">
+                    <text class="block">订单号:</text>
+                    <text>{{order}}</text>
+                </view>
+                <view class="shade-box">
+                    <text>qq:</text>
+                    <text>{{qq || "无"}}</text>
+                </view>
+                <view class="shade-box">
+                    <text class="block">备注信息:</text>
+                    <text>{{remark || "无"}}</text>
+                </view>
+            </view>
+            <view class="flex p-top-6 flex-center-2">
+                <button class="flex-0 f16 color-white" formType="submit" hover-class="defaultTap">确认</button>
+                <button class="flex-0 f16" bindtap="bindClose" hover-class="defaultTap">取消</button>
+            </view>   
+        </view>
+    </view>
+</form>
